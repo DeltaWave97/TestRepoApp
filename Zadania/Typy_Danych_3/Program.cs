@@ -20,7 +20,7 @@ Console.WriteLine("While" );
 
  Console.WriteLine("_________________" );
  Console.WriteLine("for" );
-for (declare i; i<10; i++)
+for (int i=0; i<10; i++)
 {
 
 }
