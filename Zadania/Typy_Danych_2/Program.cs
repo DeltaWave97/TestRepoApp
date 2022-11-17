@@ -130,28 +130,69 @@ for (int i=0; i < 1; i++)
     Console.WriteLine("Wynik = " + res2);
 }
 Console.WriteLine("_________________");
+
 // 4. Napisz program który będzie wyświetlał podaną liczbę pierwszą z kolei,
 // np. pierwsza liczba to 2, piąta to 11 itd.
 
-// Console.WriteLine("4. Napisz program który będzie wyświetlał podaną liczbę pierwszą z kolei, np. pierwsza liczba to 2, piąta to 11 itd.");
-// Console.WriteLine("While" );
-//     while () {
-  
-//      }
+ Console.WriteLine("4. Napisz program który będzie wyświetlał podaną liczbę pierwszą z kolei, np. pierwsza liczba to 2, piąta to 11 itd.");
+
+// 5. Wyświetl dla podanych dwóch liczb całkowitych ich największy wspólny dzielnik.
+Console.WriteLine("5. Wyświetl dla podanych dwóch liczb całkowitych ich największy wspólny dzielnik");
+int Num51 = 52, Num52 = 10;
+int Num53 = 0;
+if (Num51<Num52){
+for (int i = 2; i <= Num51; i++) 
+{
+
+    if (Num51%i==0 & Num52%i==0)
+    {
+        if (i>Num53)
+        {
+            Num53 = i;
+        }
+    }
+}
+}
+else
+{
+    for (int i = 2; i <= Num52; i++) 
+{
+
+    if (Num51%i==0 & Num52%i==0)
+    {
+        if (i>Num53)
+        {
+            Num53 = i;
+        }
+    }
+}
+}
+
+Console.WriteLine($"Największy wspólny dzielnik liczb {Num51} oraz {Num52} wynosi {Num53}");
+
+// 6. Wyświetl dla podanych dwóch liczb całkowitych ich największą wspólną
+// wielokrotność.
+Console.WriteLine("6. Wyświetl dla podanych dwóch liczb całkowitych ich największą wspólną wielokrotność.");
+int Num61 = Num51, Num62=Num52;
+Console.WriteLine($"Największa wspólna wielokrotność liczb {Num61} oraz {Num62} wynosi {Num61*Num62}");
+
+// 7. Wyświetl pole prostokąta dla podanej liczby całkowitej.
+Console.WriteLine("// 7. Wyświetl pole prostokąta dla podanej liczby całkowitej. ---------- zakładam, ze chodzi o kwadrat");
+int Num71 = 6;
+Console.WriteLine($"Wybrałem liczbę {Num71} i pole tej figury wynosi {Num71*Num71}");
 
 
-//  Console.WriteLine("_________________" );
-//  Console.WriteLine("Do While" );
+// 8. Wyświetl pole trójkąta dla podanej podstawy i wysokości.
+Console.WriteLine("// 8. Wyświetl pole trójkąta dla podanej podstawy i wysokości.");
+int Num81=6, Num82=15;
+Console.WriteLine($"Wybrałem liczby {Num81} oraz {Num82} i pole trójkąta wynosi {(Num81*Num82)/2}");
 
-//  do {
- 
-//     }
-//  while ();
+// 9. Wyświetl pole równoległoboku dla podanej podstawy i wysokości
+Console.WriteLine("// 9. Wyświetl pole równoległoboku dla podanej podstawy i wysokości");
+int Num91=15, Num92 = 14;
+Console.WriteLine($"Wybrałem liczby {Num91} oraz {Num92} i pole równoległoboku wynosi {(Num91*Num92)}");
 
-
-//  Console.WriteLine("_________________" );
-//  Console.WriteLine("for" );
-// for (int i=0; i<10; i++)
-// {
-
-// }
+// 10. Wyświetl pole trapezu dla podanej wysokości oraz dwóch podstaw.
+Console.WriteLine("// 10. Wyświetl pole trapezu dla podanej wysokości oraz dwóch podstaw.");
+int Num101=15, Num102 = 14, Num103=4;
+Console.WriteLine($"Wybrałem liczby podstaw {Num101} oraz {Num102}, wysokość: {Num103}, a pole trapezu wynosi {((Num101+Num102)*Num103)/2}");
