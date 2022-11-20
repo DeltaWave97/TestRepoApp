@@ -43,3 +43,73 @@ algorytmów napisz metodę, która dla podanej tablicy zwróci nową
 tablicę, ale z posortowanymi wartościami od największej do 
 najmniejszej. 
  */
+
+
+int[] array1= Randomuse.generateArray(10);
+Console.Write($"Wylosowana Tablica -> ");
+foreach (int item in array1)
+{
+    Console.Write($"{array1[item]} ");
+}
+Console.WriteLine("\n 1.  Napisz metodę, która dla podanej tablicy zwróci największą liczbę. ");
+
+int x1=0;
+foreach (int item in array1)
+{
+    if (x1<item)
+    {
+        x1=item;
+    }
+    else {}
+}
+Console.WriteLine($"Największa liczba w tablicy to {x1} \n");
+Console.WriteLine("---------------------------------------------------------------------------------------------");
+
+Console.WriteLine("2.  Napisz metodę, która dla podanej tablicy zwróci drugą największą liczbę. ");
+int x21=0;
+int x22=-1;
+
+foreach (int item in array1)
+{
+    if (x21<item)
+    {
+        x22=x21;
+        x21=item;
+    }
+    else {}
+}
+Console.WriteLine($"Druga Największa liczba w tablicy to {x22} \n");
+Console.WriteLine("---------------------------------------------------------------------------------------------");
+
+Console.WriteLine("3.  Napisz metodę, która dla podanej tablicy zwróci średnią, medianę oraz modę. ");
+int  mediana3=0, moda3=0, i=0;
+double srednia3 = 0;
+foreach (int item in array1)
+{
+    i++;
+    srednia3=srednia3+item;
+}
+array1.Sort(item,array1);
+if (i%2==0)
+{
+    mediana3 = SortedArray1[i/2];
+}
+else
+{
+    mediana3=SortedArray1[(i/2)+1];
+}
+Console.WriteLine($"Suma Wszystkich Liczb = {srednia3} Wielkość tabeli = {i} Średnia = {srednia3/i}, Mediana={mediana3}, Moda=");
+
+public static class Randomuse
+{
+	public static int[] generateArray(int count)
+	{
+		Random random = new Random();
+		int[] values = new int[count];
+
+		for (int i = 0; i < count; ++i)
+			values[i] = random.Next(0,9);
+
+		return values;
+	}
+}
