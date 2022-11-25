@@ -45,7 +45,8 @@ najmniejszej.
  */
 
 
-int[] array1= Randomuse.generateArray(10);
+//int[] array1= Randomuse.generateArray(10);
+int[] array1 = {0,1,2,3,5,8,9};
 Console.Write($"Wylosowana Tablica -> ");
 foreach (int item in array1)
 {
@@ -56,7 +57,7 @@ Console.WriteLine("\n 1.  Napisz metodę, która dla podanej tablicy zwróci naj
 int x1=0;
 foreach (int item in array1)
 {
-    if (x1<item)
+    if (x1<array1[item])
     {
         x1=item;
     }
@@ -67,7 +68,7 @@ Console.WriteLine("-------------------------------------------------------------
 
 Console.WriteLine("2.  Napisz metodę, która dla podanej tablicy zwróci drugą największą liczbę. ");
 int x21=0;
-int x22=-1;
+int x22=0;
 
 foreach (int item in array1)
 {
@@ -89,16 +90,32 @@ foreach (int item in array1)
     i++;
     srednia3=srednia3+item;
 }
-array1.Sort(item,array1);
+
 if (i%2==0)
 {
-    mediana3 = SortedArray1[i/2];
+    mediana3 = array1[(1+i)/2];
 }
 else
 {
-    mediana3=SortedArray1[(i/2)+1];
+    mediana3=array1[((1+i)/2)+1];
 }
-Console.WriteLine($"Suma Wszystkich Liczb = {srednia3} Wielkość tabeli = {i} Średnia = {srednia3/i}, Mediana={mediana3}, Moda=");
+
+moda3 = array1.GroupBy(v => v)
+            .OrderByDescending(g => g.Count())
+            .First()
+            .Key;
+
+Console.WriteLine($"Suma Wszystkich Liczb = {srednia3} Wielkość tabeli = {i}"); 
+Console.WriteLine($"Średnia = {srednia3/i}, Mediana={mediana3}, Moda={moda3}");
+Console.WriteLine("---------------------------------------------------------------------------------------------");
+
+
+
+Console.WriteLine("4.  Napisz metodę, która dla podanej tablicy oraz podanej wartości zwróci"); 
+Console.WriteLine("informację, ile razy dana liczba występuję w owej tablicy (czyli metoda"); 
+Console.WriteLine("przyjmuje dwa argumenty: tablice oraz liczbę. następnie sprawdza ile ");
+Console.WriteLine("razy ta liczba wystąpiła w tej tablicy i zwraca tą ilość). ");
+
 
 public static class Randomuse
 {
